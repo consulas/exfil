@@ -1,9 +1,7 @@
+import os
 import cv2
 import numpy as np
 # import cupy as cp
-from io import BytesIO
-import os
-from PIL import Image
 from collections import Counter
 
 # Constants

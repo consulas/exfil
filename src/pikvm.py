@@ -1,7 +1,6 @@
 import requests
-import urllib3
 from requests.auth import HTTPBasicAuth
-from io import BytesIO
+import urllib3
 import cv2
 import numpy as np
 

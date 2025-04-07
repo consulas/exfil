@@ -1,6 +1,9 @@
 # Terms
 This repo will require two computers, which I will refer to as Jx and PC. Jx is the computer you want to exfiltrate code from. PC is your personal device where you receive the code.
 
+# Install Packages
+`pip install -r requirements.txt`
+
 # PiKVM Image Exfiltration  
 ## Tests  
 Test different VSCode font settings. I've found the following settings work best, showing about 40x190 rows and columns. Use a light theme or invert the colors in the script.
@@ -28,11 +31,9 @@ It's slow AF, we're limited by the PiKVM screenshot api. HDMI Exfil will be fast
 Coming soon!
 
 # HTTPS Exfiltration
-PC: Run this command in the temp folder to create cert and key files: `openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365`  
-PC: Start `server_exfil.py`  
-Jx: Run `https_send_file.py <file> <host:port>`  
+Deprecated, I wouldn't recommend HTTPS with a python script. Security can log keystrokes, requests from client side, browser history, form submissions, and run screen capture. Encrypting and sending to a VSCode plugin may do better, but is not infalliable.
+I may create a VSCode plugin for this in the future. TBD.
 
 # TODO
 Image Exfiltration with HDMI  
-HTTPS Exfiltration features  
 Glyph matching with vpi (https://docs.nvidia.com/vpi/sample_template_matching.html) and python CUDA (https://nvidia.github.io/cuda-python/latest)  
